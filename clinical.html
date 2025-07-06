@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clinical Trials</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #24476c;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Two columns */
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 50px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h3 {
+            color: #3e6b9b;
+        }
+
+        .details {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Clinical Trials</h1>
+        <nav>
+            <a href="#Our framework">OUR FRAMEWORK</a>
+            <a href="#News and event">NEWS AND EVENTS</a>
+            <a href="#Feedback">FEEDBACK</a>
+            <a href="#Support">SUPPORT</a>
+            <a href="#Contact us">CONTACT US</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <div class="grid-container">
+                <div class="card" onclick="toggleDetails('phaseTrials')">
+                    <h3>Phase 1, 2, 3 Clinical Trials</h3>
+                    <div id="phaseTrials" class="details">
+                        <p>Utilizing Predictive Analytics and Wearable Device Data Integration to enhance clinical trial outcomes.</p>
+                    </div>
+                </div>
+                <div class="card" onclick="toggleDetails('chemicalPrediction')">
+                    <h3>Chemical Reaction Prediction</h3>
+                    <div id="chemicalPrediction" class="details">
+                        <p>Employing AI-Powered Reaction Networks and Molecular Dynamics for accurate reaction predictions.</p>
+                    </div>
+                </div>
+                <div class="card" onclick="toggleDetails('admetAssistant')">
+                    <h3>ADMET Assistant</h3>
+                    <div id="admetAssistant" class="details">
+                        <p>Leveraging Deep Learning and Bayesian Models to predict ADMET properties of drug candidates.</p>
+                    </div>
+                </div>
+                <div class="card" onclick="toggleDetails('simulationTool')">
+                    <h3>Simulation Tool for Drug Discovery</h3>
+                    <div id="simulationTool" class="details">
+                        <p>Utilizing Digital Twins and Reinforcement Learning to simulate drug discovery processes.</p>
+                    </div>
+                </div>
+                <div class="card" onclick="toggleDetails('wearableMonitoring')">
+                    <h3>Wearable & IoT-Integrated Monitoring</h3>
+                    <div id="wearableMonitoring" class="details">
+                        <p>Implementing Edge AI and Predictive Analytics for AI-driven early warning systems.</p>
+                    </div>
+                </div>
+                <div class="card" onclick="toggleDetails('regulatoryCompliance')">
+                    <h3>AI for Regulatory Compliance in Trials</h3>
+                    <div id="regulatoryCompliance" class="details">
+                        <p>Automating documentation and ensuring data integrity using Blockchain and Explainable AI.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Clinical Trials. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleDetails(id) {
+            const details = document.getElementById(id);
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

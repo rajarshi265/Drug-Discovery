@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drug Discovery Platform</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #497bb1;
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Align items in a single line */
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px; /* Space between logo and text */
+        }
+
+        .logo img {
+            width: 50px; /* Adjust size */
+            height: auto;
+            margin-right: 10px;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex; /* Use flexbox for horizontal alignment */
+            gap: 15px; /* Space between navigation items */
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        #hero {
+            background-color: #e9ecef;
+            padding: 60px;
+            text-align: center;
+        }
+
+        main {
+            padding: 0%;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            background-size: cover; /* Ensure background image covers the div */
+            padding: 300px; /* Adjust padding as needed */
+            color: white; /* Text color for better visibility */
+            overflow: hidden; /* Prevent overflow */
+        }
+
+        .feature {
+            position: absolute;
+            z-index: 3;
+            transition: 0.5s all;
+            opacity: 1; /* Ensure text is visible */
+            color: #fff8f8;
+            transform: translateY(0); /* Reset transform */
+            text-align: center; /* Center text */
+        }
+
+        .feature h1 {
+            margin: 0;
+        }
+
+        .feature p {
+            letter-spacing: 1px;
+            font-size: 15px;
+            margin-top: 8px;
+            margin-bottom: 20px;
+        }
+
+        .feature .btn {
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            background: #0c78d0;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.4s ease-in-out;
+        }
+        .btn:hover{
+            box-shadow: 0 0 0 4px #fff,
+            0 0 0 8px #0c78d0;
+        }
+
+        /* Background images for each feature section */
+        #feature1 {
+            background-image: url('image/research.jpg');
+        }
+
+        #feature2 {
+            background-image: url('image/preclinical.jpg');
+        }
+
+        #feature3 {
+            background-image: url('image/clinical.jpg');
+        }
+
+        #feature4 {
+            background-image: url('image/review.jpg');
+        }
+
+        /* Overlay for better text visibility */
+        .features::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+            z-index: 2; /* Place it below the text */
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column; /* Stack items vertically */
+                align-items: flex-start; /* Align items to the start */
+            }
+
+            nav ul {
+                flex-direction: column; /* Stack navigation items vertically */
+                gap: 10px; /* Reduce gap */
+            }
+
+            .features {
+                padding: 150px; /* Reduce padding for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img width="100px" src="image/logo.jpg" alt="DropCure Logo" class="logo">
+            <h2>DropCure</h2>
+        </div>
+        
+        <nav>
+            <ul>
+                <li><a href="#Home">HOME</a></li>
+                <li><a href="#Our framework">OUR FRAMEWORK</a></li>
+                <li><a href="#News and event">NEWS AND EVENTS</a></li>
+                <li><a href="#Feedback">FEEDBACK</a></li>
+                <li><a href="#Support">SUPPORT</a></li>
+                <li><a href="#Contact us">CONTACT US</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="hero">
+            <h1>Accelerate Drug Discovery with AI</h1>
+            <p>We use our AI engine to transform drug discovery and create better medicines.</p>
+            <button onclick="fetchGeminiData()"> Gemini </button>
+        </section>
+
+        <section id="feature1" class="features">
+            <div class="feature">
+                <h1>Research and Development</h1>
+                <p>Research for a new drug begins in the laboratory.</p>
+                <a href="research.html" class="btn">View more</a>
+            </div>
+        </section>
+
+        <section id="feature2" class="features">
+            <div class="feature">
+                <h1>Pre Clinical</h1>
+                <p>Drugs undergo laboratory and virtual animal testing to answer basic questions about safety.</p>
+                <a href="preclinical.html" class="btn">View more</a>
+            </div>
+        </section>
+
+        <section id="feature3" class="features">
+            <div class="feature">
+                <h1>Clinical Trials</h1>
+                <p>Drugs are tested virtually on people to make sure they are safe and effective.</p>
+                <a href="clinical.html" class="btn">View more</a>
+            </div>
+        </section>
+
+        <section id="feature4" class="features">
+            <div class="feature">
+                <h1>Review and Approval</h1>
+                <p>Review teams thoroughly examine all of the submitted data related to the drug or device and make a decision to approve or not to approve it & monitors all drug and device safety once products are available for use by the public.</p>
+                <a href="review.html" class="btn">View more</a>
+            </div>
+        </section>
+
+        <div id="output"></div> <!-- Element to display API data -->
+    </main>
+
+    <footer>
+        <p>&copy; Our mission is to revolutionize the drug discovery process by making it faster, more efficient, and accessible to researchers worldwide.</p>
+    </footer>
+
+    <script>
+        async function fetchGeminiData() {
+            const apiKey = 'YOUR_API_KEY'; // Replace with your actual API key
+            const apiSecret = 'YOUR_API_SECRET'; // Replace with your actual API secret
+            const url = 'https://api.gemini.com/v1/your_endpoint'; // Replace with the actual endpoint you want to call
+
+            const headers = {
+                'Content-Type': 'application/json',
+                'X-GEMINI-APIKEY': apiKey,
+                // You may need to include other headers depending on the API documentation
+            };
+
+            try {
+                const response = await fetch(url, {
+                    method: 'GET', // or 'POST' depending on the endpoint
+                    headers: headers,
+                });
+
+                if (!response.ok) {
+                    throw new Error('Network response was not ok ' + response.statusText);
+                }
+
+                const data = await response.json();
+                displayData(data); // Call a function to display the data
+            } catch (error) {
+                console.error('There was a problem with the fetch operation:', error);
+            }
+        }
+
+        function displayData(data) {
+            const output = document.getElementById('output'); // Make sure you have an element with this ID
+            output.innerHTML = JSON.stringify(data, null, 2); // Display the data in a formatted way
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research and Development</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #1b3148;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Two columns */
+            gap: 20px;
+        }
+
+        .card {
+            background-color: rgb(249, 241, 241);
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 50px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h3 {
+            color: #3b638f;
+        }
+
+        .details {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Research and Development</h1>
+        <nav>
+            <a href="#Our framework">OUR FRAMEWORK</a>
+            <a href="#News and event">NEWS AND EVENTS</a>
+            <a href="#Feedback">FEEDBACK</a>
+            <a href="#Support">SUPPORT</a>
+            <a href="#Contact us">CONTACT US</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <div class="grid-container">
+                <div class="card" onclick="toggleDetails('targetMolecule')">
+                    <h3>Target Molecule Identification</h3>
+                    <div id="targetMolecule" class="details">
+                        <p>Utilizing Generative AI and Deep Learning to identify potential target molecules for drug development.</p>
+                    </div>
+                </div>
+                <div class="card" onclick="toggleDetails('fragmentDrugDesign')">
+                    <h3>Fragment-Based Drug Design</h3>
+                    <div id="fragmentDrugDesign" class="details">
+                        <p>Employing Quantum Mechanics and Molecular Dynamics to design drug fragments that bind effectively to targets.</p>
+                    </div>
+                </div>
+                <div class="card" onclick="toggleDetails('drugRepurposing')">
+                    <h3>Drug Repurposing Challenge</h3>
+                    <div id="drugRepurposing" class="details">
+                        <p>Leveraging Graph Neural Networks and NLP on biomedical literature to identify new uses for existing drugs.</p>
+                    </div>
+                </div>
+                <div class="card" onclick="toggleDetails('chemicalSpace')">
+                    <h3>Chemical Space Exploration Tool</h3>
+                    <div id="chemicalSpace" class="details">
+                        <p>Using Monte Carlo Simulations and Reinforcement Learning to explore vast chemical spaces for potential drug candidates.</p>
+                    </div>
+                </div>
+                <div class="card" onclick="toggleDetails('biomarkerDiscovery')">
+                    <h3>Biomarker Discovery</h3>
+                    <div id="biomarkerDiscovery" class="details">
+                        <p>Applying Machine Learning and Multi-omics Data Integration to discover biomarkers for disease diagnosis and treatment.</p>
+                    </div>
+                </div>
+                <div class="card" onclick="toggleDetails('antibodyDesign')">
+                    <h3>Antibody Design</h3>
+                    <div id="antibodyDesign" class="details">
+                        <p>Utilizing Deep Learning and Computational Immunology to design effective antibodies for therapeutic applications.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Research and Development. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleDetails(id) {
+            const details = document.getElementById(id);
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>

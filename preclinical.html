@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preclinical Testing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #346293;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-top: 20px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Two columns */
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 50px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h3 {
+            color: #5081b5;
+        }
+
+        .details {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Preclinical Testing</h1>
+        <nav>
+            <a href="#Our framework">OUR FRAMEWORK</a>
+            <a href="#News and event">NEWS AND EVENTS</a>
+            <a href="#Feedback">FEEDBACK</a>
+            <a href="#Support">SUPPORT</a>
+            <a href="#Contact us">CONTACT US</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <div class="grid-container">
+                <div class="card" onclick="toggleDetails('inVitroInVivo')">
+                    <h3>In Vitro & In Vivo Analysis</h3>
+                    <div id="inVitroInVivo" class="details">
+                        <p>Utilizing Digital Twin Technology and Physiological Simulations for comprehensive analysis.</p>
+                    </div>
+                </div>
+                <div class="card" onclick="toggleDetails('toxicologyDashboard')">
+                    <h3>Toxicology Dashboard</h3>
+                    <div id="toxicologyDashboard" class="details">
+                        <p>Employing QSAR Modelling and Computational Toxicology for risk assessment.</p>
+                    </div>
+                </div>
+                <div class="card" onclick="toggleDetails('drugInteractionChecker')">
+                    <h3>Drug Interaction Checker</h3>
+                    <div id="drugInteractionChecker" class="details">
+                        <p>AI-Powered Knowledge Graphs to evaluate potential drug interactions.</p>
+                    </div>
+                </div>
+                <div class="card" onclick="toggleDetails('molecularDocking')">
+                    <h3>Molecular Docking</h3>
+                    <div id="molecularDocking" class="details">
+                        <p>Utilizing Molecular Dynamics, AutoDock, and ChimeraX for docking studies.</p>
+                    </div>
+                </div>
+                <div class="card" onclick="toggleDetails('qsarModeling')">
+                    <h3>QSAR Modeling</h3>
+                    <div id="qsarModeling" class="details">
+                        <p>Applying Support Vector Machines and Random Forests for predictive modeling.</p>
+                    </div>
+                </div>
+                <div class="card" onclick="toggleDetails('visualizationTools')">
+                    <h3>Visualization Tools</h3>
+                    <div id="visualizationTools" class="details">
+                        <p>Using PyMOL, ChimeraX, and RDKit for molecular visualization and analysis.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Preclinical Testing. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleDetails(id) {
+            const details = document.getElementById(id);
+            if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
